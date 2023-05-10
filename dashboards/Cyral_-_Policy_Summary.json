@@ -1,0 +1,379 @@
+{
+    "type": "DashboardV2SyncDefinition",
+    "name": "Cyral - Policy Summary",
+    "description": "",
+    "title": "Cyral - Policy Summary",
+    "rootPanel": null,
+    "theme": "Light",
+    "topologyLabelMap": {
+        "data": {}
+    },
+    "refreshInterval": 0,
+    "timeRange": {
+        "type": "BeginBoundedTimeRange",
+        "from": {
+            "type": "RelativeTimeRangeBoundary",
+            "relativeTime": "-15m"
+        },
+        "to": null
+    },
+    "layout": {
+        "layoutType": "Grid",
+        "layoutStructures": [
+            {
+                "key": "panelFE36F0048F90EB43",
+                "structure": "{\"height\":4,\"width\":5,\"x\":0,\"y\":0}"
+            },
+            {
+                "key": "panel399254B98CAB1945",
+                "structure": "{\"height\":4,\"width\":5,\"x\":5,\"y\":0}"
+            },
+            {
+                "key": "panel26FADA66828C4A4C",
+                "structure": "{\"height\":4,\"width\":4,\"x\":10,\"y\":0}"
+            },
+            {
+                "key": "panel4697E69A9256484D",
+                "structure": "{\"height\":4,\"width\":5,\"x\":14,\"y\":0}"
+            },
+            {
+                "key": "panel3E7CE173B07CF84B",
+                "structure": "{\"height\":4,\"width\":5,\"x\":19,\"y\":0}"
+            },
+            {
+                "key": "panel241B4531AA66484C",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":4}"
+            },
+            {
+                "key": "panel9FBED8429A57DB4D",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":4}"
+            },
+            {
+                "key": "panel01F1D844AF5A4A4C",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":10}"
+            },
+            {
+                "key": "panel2D533E1680B0184F",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":10}"
+            },
+            {
+                "key": "panel284E1754A0316A43",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":16}"
+            },
+            {
+                "key": "panel953EA468AC5AC84A",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":22}"
+            }
+        ]
+    },
+    "panels": [
+        {
+            "id": null,
+            "key": "panelFE36F0048F90EB43",
+            "title": "Total Violations",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Violations\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\"))\n| json auto|where %\"policyViolated\" = \"true\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|count",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel399254B98CAB1945",
+            "title": "Repos With Violations",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Repos\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\"))\n| json auto|where %\"policyViolated\" = \"true\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|count_distinct(%\"repo.name\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel26FADA66828C4A4C",
+            "title": "Apps With Violations",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Applications\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\"))\n| json auto|where %\"policyViolated\" = \"true\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|count_distinct(%\"client.applicationName\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel4697E69A9256484D",
+            "title": "Users With Violations",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"End Users\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\"))\n| json auto|where %\"policyViolated\" = \"true\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|count_distinct(%\"identity.endUser\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel3E7CE173B07CF84B",
+            "title": "Policies Not In Use",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"general\":{\"type\":\"svp\",\"displayType\":\"default\",\"mode\":\"singleValueMetrics\"},\"svp\":{\"option\":\"Average\",\"label\":\"Policies\",\"useBackgroundColor\":false,\"useNoData\":false,\"noDataString\":\"0\",\"hideData\":false,\"hideLabel\":false,\"rounding\":0,\"valueFontSize\":24,\"labelFontSize\":14,\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#16943E\"},{\"from\":null,\"to\":null,\"color\":\"#DFBE2E\"},{\"from\":null,\"to\":null,\"color\":\"#BF2121\"}],\"sparkline\":{\"show\":false,\"color\":\"#222D3B\"},\"gauge\":{\"show\":false,\"min\":0,\"max\":100,\"showThreshold\":false,\"showThresholdMarker\":false}},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\"))\n| json auto|where %\"policyViolated\" matches \"*\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|first(%\"activityTime\") by %\"identity.endUser\", %\"identity.group\", %\"identity.repoUser\"| now()-30d as expireTime|parseDate(_first, \"yyyy-MM-dd HH:mm:ss\") as parsedDate|where expireTime > parsedDate|count",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel241B4531AA66484C",
+            "title": "Top {{topKLimit}} Users With Violations",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"bar\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\"))\n| json auto|where %\"policyViolated\" = \"true\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|count by %\"identity.endUser\" |sort by _count desc | limit {{topKLimit}}",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel9FBED8429A57DB4D",
+            "title": "Top {{topKLimit}} Policies Violated",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"bar\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\"))\n| json auto|json \"policyViolations[*].policyName\" as policyName|where %\"policyViolated\" = \"true\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"| count by policyName|sort by _count desc | limit {{topKLimit}}",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel01F1D844AF5A4A4C",
+            "title": "Top {{topKLimit}} Policies Not Used in Past 30 Days",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"bar\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json \"policyViolations[*].policyName\" as policyName|json auto|where %\"policyViolated\" matches \"*\" and policyName=\"*\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|first(%\"activityTime\") by policyName| now()-30d as expireTime|parseDate(_first, \"yyyy-MM-dd HH:mm:ss\") as parsedDate|where expireTime > parsedDate|count by policyName|sort by _count desc | limit {{topKLimit}}",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel2D533E1680B0184F",
+            "title": "Statement Types Without Policy",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"pie\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json auto|where %\"policyViolated\" = \"false\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\" AND isNull(%\"request.datasetsAccessed\")|count by %\"request.statementType\" |lookup * from path://\"/Library/Users/pcasas@cyral.com/Cyral Dashboards/statementCategory\" on %\"request.statementType\"=statementType| if (isNull(statementCategory), \"Uncategorized\", statementCategory) as statementCategory|sum(_count) by statementCategory",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel284E1754A0316A43",
+            "title": "Top {{topKLimit}} Queries Without a Policy",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"table\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json auto|where %\"policyViolated\" = \"false\" and %\"request.statementType\" = \"SELECT\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\" and isNull(%\"request.datasetsAccessed\")|count by %\"repo.name\", %\"request.statement\"|sort by _count desc | limit {{topKLimit}}",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel953EA468AC5AC84A",
+            "title": "Bottom {{topKLimit}} SELECT Queries Without a Policy",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"table\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json auto|where %\"policyViolated\" = \"false\" and %\"request.statementType\" = \"SELECT\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\" and isNull(%\"request.datasetsAccessed\")|parse regex field=%\"request.statement\" \"^SELECT (?<Fields>.*) FROM (?<TableName>[a-z_\\.\\-A-Z$]*\\b)\"|count as Count, sum(%\"response.records\") as recordsRead by %\"repo.name\", %\"client.connectionTime\", %\"identity.group\", %\"identity.endUser\", %\"client.applicationName\", %\"client.host\", Fields, TableName|sort by Count asc | limit {{topKLimit}}",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        }
+    ],
+    "variables": [
+        {
+            "id": "2B1454E9BB8A9BA8",
+            "name": "topKLimit",
+            "displayName": "topKLimit",
+            "defaultValue": "5",
+            "sourceDefinition": {
+                "variableSourceType": "CsvVariableSourceDefinition",
+                "values": "5,10,25,50,100"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false
+        },
+        {
+            "id": "43A73CC1A9ABABBB",
+            "name": "sidecar_name",
+            "displayName": "sidecar_name",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json \"sidecar.name\" as sidecar_name|count by sidecar_name",
+                "field": "sidecar_name"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false
+        },
+        {
+            "id": "4E9287E8BA8B9B9B",
+            "name": "repo_name",
+            "displayName": "repo_name",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json \"repo.name\" as repo_name|count by repo_name",
+                "field": "repo_name"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false
+        }
+    ],
+    "coloringRules": []
+}

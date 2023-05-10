@@ -1,0 +1,1071 @@
+{
+    "type": "DashboardV2SyncDefinition",
+    "name": "Cyral - Data Activity Logs Standard Dashboard v2.0",
+    "description": "Cyral Standard Dashboard",
+    "title": "Cyral - Data Activity Logs Standard Dashboard v2.0",
+    "theme": "Dark",
+    "topologyLabelMap": {
+        "data": {}
+    },
+    "refreshInterval": 0,
+    "timeRange": {
+        "type": "BeginBoundedTimeRange",
+        "from": {
+            "type": "RelativeTimeRangeBoundary",
+            "relativeTime": "-15m"
+        },
+        "to": null
+    },
+    "layout": {
+        "layoutType": "Grid",
+        "layoutStructures": [
+            {
+                "key": "panelPANE-D505D6C6A8C6E947",
+                "structure": "{\"height\":1,\"width\":24,\"x\":0,\"y\":0}"
+            },
+            {
+                "key": "panelA0615B76B1F1C84A",
+                "structure": "{\"height\":1,\"width\":24,\"x\":0,\"y\":40}"
+            },
+            {
+                "key": "panel32025328A0731843",
+                "structure": "{\"height\":1,\"width\":24,\"x\":0,\"y\":71}"
+            },
+            {
+                "key": "panel7AA9E28D9CB52847",
+                "structure": "{\"height\":1,\"width\":24,\"x\":0,\"y\":90}"
+            },
+            {
+                "key": "panelPANE-D55F4CEF87C2284D",
+                "structure": "{\"height\":5,\"width\":6,\"x\":0,\"y\":1}"
+            },
+            {
+                "key": "panel127410DD955E294A",
+                "structure": "{\"height\":5,\"width\":6,\"x\":6,\"y\":1}"
+            },
+            {
+                "key": "panel90D220A49E285949",
+                "structure": "{\"height\":5,\"width\":6,\"x\":12,\"y\":1}"
+            },
+            {
+                "key": "panel9E66CB78A5BAC94C",
+                "structure": "{\"height\":5,\"width\":6,\"x\":18,\"y\":1}"
+            },
+            {
+                "key": "panelPANE-53E2EFA1AB0DDA47",
+                "structure": "{\"height\":11,\"width\":24,\"x\":0,\"y\":6}"
+            },
+            {
+                "key": "panel7BCB994187A7F94B",
+                "structure": "{\"height\":5,\"width\":12,\"x\":0,\"y\":17}"
+            },
+            {
+                "key": "panelF50332B7ACE8BB46",
+                "structure": "{\"height\":5,\"width\":12,\"x\":12,\"y\":17}"
+            },
+            {
+                "key": "panelPANE-3AAEE6A092606B45",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":22}"
+            },
+            {
+                "key": "panel55EA81CEABE30B45",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":22}"
+            },
+            {
+                "key": "panelPANE-17C1B4059D7EFB46",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":41}"
+            },
+            {
+                "key": "panelPANE-B4D64894BDEF9B4A",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":47}"
+            },
+            {
+                "key": "panelPANE-239367CEA5FDFB44",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":59}"
+            },
+            {
+                "key": "panelPANE-C0235C4AB4A05B4B",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":59}"
+            },
+            {
+                "key": "panelPANE-F0897D6E8A107943",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":65}"
+            },
+            {
+                "key": "panelPANE-017485FFAD837A41",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":65}"
+            },
+            {
+                "key": "panelPANE-643A956984C7394B",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":72}"
+            },
+            {
+                "key": "panelPANE-67A8281BB6C43A44",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":72}"
+            },
+            {
+                "key": "panelPANE-9A249D48850F284B",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":84}"
+            },
+            {
+                "key": "panelPANE-F2999A27BA501B4F",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":84}"
+            },
+            {
+                "key": "panelPANE-C318C5898B36E841",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":91}"
+            },
+            {
+                "key": "panelPANE-4E001A1AB579A949",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":97}"
+            },
+            {
+                "key": "panelPANE-CE44B18F9E5CB949",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":97}"
+            },
+            {
+                "key": "panelPANE-9C4BA74F8D875947",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":103}"
+            },
+            {
+                "key": "panelPANE-FDF9FA7495D32B45",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":109}"
+            },
+            {
+                "key": "panelC684A6ADB7CB5A45",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":53}"
+            },
+            {
+                "key": "panelPANE-037B6A2D964F484E",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":34}"
+            },
+            {
+                "key": "panel4CC6532882D1A84C",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":34}"
+            },
+            {
+                "key": "panel74C06DDC93D77A47",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":28}"
+            },
+            {
+                "key": "panelA970B7DAA388EA49",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":78}"
+            },
+            {
+                "key": "panelB78B3B8DABE9AA40",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":78}"
+            }
+        ]
+    },
+    "panels": [
+        {
+            "id": null,
+            "key": "panelPANE-D505D6C6A8C6E947",
+            "title": "System Summary",
+            "visualSettings": "{\"general\":{\"mode\":\"TextPanel\",\"type\":\"text\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"series\":{},\"text\":{\"format\":\"markdownV2\",\"backgroundColor\":\"#004eae\",\"textColor\":\"#ffffff\",\"verticalAlignment\":\"center\",\"horizontalAlignment\":\"center\",\"showTitle\":false},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "TextPanel",
+            "text": "## System Summary"
+        },
+        {
+            "id": null,
+            "key": "panelA0615B76B1F1C84A",
+            "title": "Data Activity",
+            "visualSettings": "{\"general\":{\"mode\":\"TextPanel\",\"type\":\"text\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"series\":{},\"text\":{\"format\":\"markdownV2\",\"backgroundColor\":\"#004eae\",\"textColor\":\"#ffffff\",\"verticalAlignment\":\"center\",\"horizontalAlignment\":\"center\",\"showTitle\":false},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "TextPanel",
+            "text": "## Data Activity"
+        },
+        {
+            "id": null,
+            "key": "panel32025328A0731843",
+            "title": "Security Activity",
+            "visualSettings": "{\"general\":{\"mode\":\"TextPanel\",\"type\":\"text\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"series\":{},\"text\":{\"format\":\"markdownV2\",\"backgroundColor\":\"#004eae\",\"textColor\":\"#ffffff\",\"verticalAlignment\":\"center\",\"horizontalAlignment\":\"center\",\"showTitle\":false},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "TextPanel",
+            "text": "## Security Activity"
+        },
+        {
+            "id": null,
+            "key": "panel7AA9E28D9CB52847",
+            "title": "Repository Performance",
+            "visualSettings": "{\"general\":{\"mode\":\"TextPanel\",\"type\":\"text\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"series\":{},\"text\":{\"format\":\"markdownV2\",\"backgroundColor\":\"#004eae\",\"textColor\":\"#ffffff\",\"verticalAlignment\":\"center\",\"horizontalAlignment\":\"center\",\"showTitle\":false},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "TextPanel",
+            "text": "## Repository Performance"
+        },
+        {
+            "id": null,
+            "key": "panelPANE-D55F4CEF87C2284D",
+            "title": "Number of Repositories",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"svp\":{\"option\":\"Latest\",\"label\":\"\",\"useBackgroundColor\":false,\"useNoData\":false,\"noDataString\":\"0\",\"hideData\":false,\"hideLabel\":false,\"rounding\":0,\"valueFontSize\":50,\"labelFontSize\":14,\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#16943E\"},{\"from\":null,\"to\":null,\"color\":\"#DFBE2E\"},{\"from\":null,\"to\":null,\"color\":\"#BF2121\"}],\"sparkline\":{\"show\":false,\"color\":\"#222D3B\"},\"gauge\":{\"show\":false,\"min\":0,\"max\":100,\"showThreshold\":false,\"showThresholdMarker\":false}},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"repo.name\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel127410DD955E294A",
+            "title": "Number of Sidecars",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"svp\":{\"option\":\"Latest\",\"label\":\"\",\"useBackgroundColor\":false,\"useNoData\":false,\"noDataString\":\"0\",\"hideData\":false,\"hideLabel\":false,\"rounding\":0,\"valueFontSize\":50,\"labelFontSize\":14,\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#16943E\"},{\"from\":null,\"to\":null,\"color\":\"#DFBE2E\"},{\"from\":null,\"to\":null,\"color\":\"#BF2121\"}],\"sparkline\":{\"show\":false,\"color\":\"#222D3B\"},\"gauge\":{\"show\":false,\"min\":0,\"max\":100,\"showThreshold\":false,\"showThresholdMarker\":false}},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"sidecar.name\",\"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"sidecar.name\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel90D220A49E285949",
+            "title": "Number of Registered Repository Accounts",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"svp\":{\"option\":\"Latest\",\"label\":\"\",\"useBackgroundColor\":false,\"useNoData\":false,\"noDataString\":\"0\",\"hideData\":false,\"hideLabel\":false,\"rounding\":0,\"valueFontSize\":50,\"labelFontSize\":14,\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#16943E\"},{\"from\":null,\"to\":null,\"color\":\"#DFBE2E\"},{\"from\":null,\"to\":null,\"color\":\"#BF2121\"}],\"sparkline\":{\"show\":false,\"color\":\"#222D3B\"},\"gauge\":{\"show\":false,\"min\":0,\"max\":100,\"showThreshold\":false,\"showThresholdMarker\":false}},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"identity.repoUser\",\"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"identity.repoUser\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel9E66CB78A5BAC94C",
+            "title": "Average Connections Per Timeframe ",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"svp\":{\"option\":\"Latest\",\"label\":\"\",\"useBackgroundColor\":false,\"useNoData\":false,\"noDataString\":\"0\",\"hideData\":false,\"hideLabel\":false,\"rounding\":0,\"valueFontSize\":50,\"labelFontSize\":14,\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#16943E\"},{\"from\":null,\"to\":null,\"color\":\"#DFBE2E\"},{\"from\":null,\"to\":null,\"color\":\"#BF2121\"}],\"sparkline\":{\"show\":false,\"color\":\"#222D3B\"},\"gauge\":{\"show\":false,\"min\":0,\"max\":100,\"showThreshold\":false,\"showThresholdMarker\":false}},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"client.connectionId\",\"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| timeslice\n| count_distinct(%\"client.connectionId\") by _timeslice\n| avg(_count_distinct)",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-53E2EFA1AB0DDA47",
+            "title": "Connection Activity by Geography",
+            "visualSettings": "{\"general\":{\"mode\":\"map\",\"type\":\"map\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourceCategory=\"cyralLogs\")\n| json \"client.host\",\"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup latitude, longitude from geo://location on ip=%\"client.host\" \n| count by latitude, longitude\n| sort _count",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel7BCB994187A7F94B",
+            "title": "Number of Active Users",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"svp\":{\"option\":\"Latest\",\"label\":\"\",\"useBackgroundColor\":false,\"useNoData\":false,\"noDataString\":\"0\",\"hideData\":false,\"hideLabel\":false,\"rounding\":0,\"valueFontSize\":50,\"labelFontSize\":14,\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#16943E\"},{\"from\":null,\"to\":null,\"color\":\"#DFBE2E\"},{\"from\":null,\"to\":null,\"color\":\"#BF2121\"}],\"sparkline\":{\"show\":false,\"color\":\"#222D3B\"},\"gauge\":{\"show\":false,\"min\":0,\"max\":100,\"showThreshold\":false,\"showThresholdMarker\":false}},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"identity.endUser\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelF50332B7ACE8BB46",
+            "title": "Number of Active SSO Groups",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"svp\":{\"option\":\"Latest\",\"label\":\"\",\"useBackgroundColor\":false,\"useNoData\":false,\"noDataString\":\"0\",\"hideData\":false,\"hideLabel\":false,\"rounding\":0,\"valueFontSize\":50,\"labelFontSize\":14,\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#16943E\"},{\"from\":null,\"to\":null,\"color\":\"#DFBE2E\"},{\"from\":null,\"to\":null,\"color\":\"#BF2121\"}],\"sparkline\":{\"show\":false,\"color\":\"#222D3B\"},\"gauge\":{\"show\":false,\"min\":0,\"max\":100,\"showThreshold\":false,\"showThresholdMarker\":false}},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"identity.group\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-3AAEE6A092606B45",
+            "title": "Number of Users in each SSO Group",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"identity.endUser\") by %\"identity.group\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel55EA81CEABE30B45",
+            "title": "Repository Connections by SSO Group",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"legend\":{\"enabled\":false},\"general\":{\"type\":\"column\",\"displayType\":\"stacked\",\"fillOpacity\":1,\"mode\":\"distribution\"},\"color\":{\"family\":\"Categorical Default\"},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"identity.endUser\") by %\"repo.name\",%\"identity.group\"\n| transpose row %\"repo.name\" column %\"identity.group\" as *",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-17C1B4059D7EFB46",
+            "title": "Repository Connections",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourceCategory=\"cyralLogs\")\n| json \"client.connectionId\",\"response.bytes\",\"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count_distinct(%\"client.connectionId\") as Connections, count as Queries, avg(%\"response.bytes\") as averageQuerySizeInBytes by %\"repo.name\"\n| round(averageQuerySizeInBytes, 2) as averageQuerySizeInBytes",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-B4D64894BDEF9B4A",
+            "title": "Repository Traffic Across Time (Queries)",
+            "visualSettings": "{\"general\":{\"mode\":\"timeSeries\",\"type\":\"line\",\"displayType\":\"default\",\"markerSize\":5,\"lineDashType\":\"solid\",\"markerType\":\"none\",\"lineThickness\":1},\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12,\"logarithmic\":false}},\"legend\":{\"enabled\":true,\"verticalAlign\":\"bottom\",\"fontSize\":12,\"maxHeight\":50,\"showAsTable\":false,\"wrap\":true},\"color\":{\"family\":\"Categorical Default\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| timeslice\n| count by _timeslice, %\"repo.name\"\n| transpose row _timeslice column %\"repo.name\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-239367CEA5FDFB44",
+            "title": "Data Most Frequently Accessed",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"client.connectionId\",\"response.executionTimeNanos\" nodrop\n| json \"identity.group\" as SSOGroup nodrop\n| json \"identity.group\" as SSOUser nodrop\n| json \"request.datasetsAccessed[*].dataset\" as dataSetAccessed\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| count as NumberOfQueries, count_distinct(%\"client.connectionId\") as NumberOfConnections, avg(%\"response.executionTimeNanos\") as AverageExecutionTime by dataSetAccessed, SSOGroup, SSOUser",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-C0235C4AB4A05B4B",
+            "title": "Data Access Distribution",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"pie\",\"displayType\":\"default\",\"fillOpacity\":1,\"startAngle\":270,\"innerRadius\":\"0%\",\"maxNumOfSlices\":10,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\" nodrop\n| json \"identity.group\" as SSOGroup nodrop\n| json \"identity.group\" as SSOUser nodrop\n| json \"request.datasetsAccessed[*].dataset\" as dataSetAccessed\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and SSOUser matches \"{{SSO_User}}\" and SSOGroup matches \"{{SSO_Group}}\"\n| count as NumberOfQueries by dataSetAccessed",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-F0897D6E8A107943",
+            "title": "Activity Category by SSO Groups",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statementType\"\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup ActivityCategory as ActivityCategory from path://\"/Library/Admin Recommended/CategoryLookup\" on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| where ActivityCategory matches \"*\"\n| count by ActivityCategory, %\"identity.group\"\n| transpose row ActivityCategory column %\"identity.group\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-017485FFAD837A41",
+            "title": "Trends in User Activity",
+            "visualSettings": "{\"general\":{\"mode\":\"timeSeries\",\"type\":\"line\",\"displayType\":\"default\",\"markerSize\":5,\"lineDashType\":\"solid\",\"markerType\":\"none\",\"lineThickness\":1},\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12,\"logarithmic\":false}},\"legend\":{\"enabled\":true,\"verticalAlign\":\"bottom\",\"fontSize\":12,\"maxHeight\":50,\"showAsTable\":false,\"wrap\":true},\"color\":{\"family\":\"Categorical Default\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statementType\",\"repo.type\"\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup ActivityCategory as ActivityCategory from path://\"/Library/Admin Recommended/CategoryLookup\" on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| where ActivityCategory matches \"*\"\n| timeslice\n| count by _timeslice, ActivityCategory\n| transpose row _timeslice column ActivityCategory",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-643A956984C7394B",
+            "title": "Privileged Commands by Users",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statementType\",\"repo.type\"\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup ActivityCategory as ActivityCategory, ActivityTerm as ActivityTerm from path://\"/Library/Admin Recommended/CategoryLookup\" on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| where ActivityCategory matches \"Privileged Commands\"\n| count_distinct(%\"identity.endUser\") by ActivityTerm",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-67A8281BB6C43A44",
+            "title": "Privileged Commands Trends",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"column\",\"displayType\":\"stacked\",\"fillOpacity\":1,\"mode\":\"distribution\"},\"color\":{\"family\":\"Categorical Default\"},\"legend\":{\"enabled\":false},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statementType\",\"repo.type\"\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup ActivityCategory as ActivityCategory, ActivityTerm as ActivityTerm from path://\"/Library/Admin Recommended/CategoryLookup\"on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| where ActivityCategory matches \"Privileged Commands\"\n| count by ActivityTerm,%\"identity.group\"\n| transpose row ActivityTerm column %\"identity.group\" as *",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-9A249D48850F284B",
+            "title": "Suspicious Activity",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"activityTypes[*]\" as activityType\n| json \"policyViolated\" as policyViolated\n| json \"repo.name\"\n| where activityType IN (\"[\\\"query\\\"]\",\"[\\\"authorizationFailure\\\"]\",\"[\\\"networkAccessViolation\\\"]\",\"[\\\"authenticationFailure\\\"]\",\"[\\\"portScan\\\"]\") and %\"repo.name\" matches \"{{repo_name}}\"\n| if(activityType=\"[\\\"query\\\"]\" and policyViolated=\"true\", \"cyralPolicyTriggered\", activityType) as activityType\n| where activityType IN (\"cyralPolicyTriggered\",\"[\\\"authorizationFailure\\\"]\",\"[\\\"networkAccessViolation\\\"]\",\"[\\\"authenticationFailure\\\"]\",\"[\\\"portScan\\\"]\")\n| count by activityType, %\"repo.name\"\n| transpose row %\"repo.name\" column activityType",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": 1000
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-F2999A27BA501B4F",
+            "title": "Suspicious Activity Trends",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"column\",\"displayType\":\"stacked\",\"fillOpacity\":1,\"mode\":\"distribution\"},\"color\":{\"family\":\"Categorical Default\"},\"legend\":{\"enabled\":false},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"activityTypes[*]\" as activityType\n| json \"policyViolated\" as policyViolated\n| json \"repo.name\"\n| where activityType IN (\"[\\\"query\\\"]\",\"[\\\"authorizationFailure\\\"]\",\"[\\\"networkAccessViolation\\\"]\",\"[\\\"authenticationFailure\\\"]\",\"[\\\"portScan\\\"]\") and %\"repo.name\" matches \"{{repo_name}}\"\n| if(activityType=\"[\\\"query\\\"]\" and policyViolated=\"true\", \"cyralPolicyTriggered\", activityType) as activityType\n| where activityType IN (\"cyralPolicyTriggered\",\"[\\\"authorizationFailure\\\"]\",\"[\\\"networkAccessViolation\\\"]\",\"[\\\"authenticationFailure\\\"]\",\"[\\\"portScan\\\"]\")\n| count by activityType, %\"repo.name\"\n| transpose row %\"repo.name\" column activityType as *",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": 1000
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-C318C5898B36E841",
+            "title": "Summary",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\",\"decimals\":2},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\"\n| json \"response.executionTimeNanos\" as executionTimeNanos\n| json \"client.connectionId\" as connectionId\n| json \"activityTimeNanos\" as activityTimeNanos\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| (executionTimeNanos/1000000) as executionTimeInMS\n| withtime activityTimeNanos\n| avg(executionTimeInMS) as avg_executionTimeInMS, count, most_recent(activityTimeNanos_withtime) as first_timeNS, least_recent(activityTimeNanos_withtime) as last_timeNS by %\"repo.name\", connectionId  \n| (first_timeNS-last_timeNS) as connectionTimeInNS\n| (connectionTimeInNS/1000000) as connectionTimeInMS\n| count(connectionId) as connectionsPerPeriod, avg(connectionTimeInMS) as averageConnectionDuration, avg(_count) as averageQueriesPerConnection, avg(avg_executionTimeInMS) as averageQueryCompletionSpeed by %\"repo.name\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-4E001A1AB579A949",
+            "title": "Query Error Rates By Repository",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statement\",\"response.isError\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| if(%\"response.isError\"==\"true\", 1,0) as errorCount\n| count AS totalQueriesOverTimeframe, sum(errorCount) AS countOfResponseWithErrors by %\"repo.name\"\n| ((countOfResponseWithErrors/totalQueriesOverTimeframe)*100) as percentOfQueriesWithError\n| round(percentOfQueriesWithError, 2) as percentOfQueriesWithError",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-CE44B18F9E5CB949",
+            "title": "Trend of Errors over Time",
+            "visualSettings": "{\"general\":{\"mode\":\"timeSeries\",\"type\":\"line\",\"displayType\":\"default\",\"markerSize\":5,\"lineDashType\":\"solid\",\"markerType\":\"none\",\"lineThickness\":1},\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12,\"logarithmic\":false}},\"legend\":{\"enabled\":true,\"verticalAlign\":\"bottom\",\"fontSize\":12,\"maxHeight\":50,\"showAsTable\":false,\"wrap\":true},\"color\":{\"family\":\"Categorical Default\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statement\",\"response.isError\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| if(%\"response.isError\"==\"true\", 1,0) as errorCount\n| timeslice\n| sum(errorCount) by _timeslice, %\"repo.name\"\n| transpose row _timeslice column %\"repo.name\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-9C4BA74F8D875947",
+            "title": "Activity Categories With Highest Error Rates",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statement\",\"request.statementType\",\"repo.type\",\"response.isError\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| if(%\"response.isError\"==\"true\", 1,0) as errorCount\n| lookup ActivityCategory as ActivityCategory from path://\"/Library/Admin Recommended/CategoryLookup\" on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| where ActivityCategory matches \"*\"\n| count as totalQueriesOverTimeframe, sum(errorCount) as countOfResponseWithErrors by ActivityCategory\n| ((countOfResponseWithErrors/totalQueriesOverTimeframe)*100) as percentOfQueriesWithError\n| round(percentOfQueriesWithError, 2) as percentOfQueriesWithError\n| sort by percentOfQueriesWithError",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-FDF9FA7495D32B45",
+            "title": "Slowest Queries",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"identity.group\",\"request.statementType\",\"repo.type\"\n| json \"request.fieldsAccessed[*].field\" as fieldAccessed nodrop\n| json \"repo.name\" as Repository\n| json \"repo.type\" as repositoryType\n| json \"identity.repoUser\" as repositoryUser\n| json \"identity.endUser\" as SSO_User\n| json \"client.applicationName\" as clientApplication\n| json \"response.bytes\" as sizeOfTransaction nodrop\n| json \"response.executionTimeNanos\" as queryCompletionTime nodrop\n| json \"client.connectionId\" as connectionId\n| json \"activityTime\" as activityTime\n| where Repository matches \"{{repo_name}}\" and clientApplication matches \"{{clientApplication}}\" and SSO_User matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup ActivityTerm as ActivityTerm from path://\"/Library/Admin Recommended/CategoryLookup\" on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| if(isBlank(fieldAccessed), \"Unknown\", fieldAccessed) as fieldAccessed\n| max(queryCompletionTime) by fieldAccessed, repositoryUser, SSO_User, clientApplication, ActivityTerm, Repository, repositoryType, queryCompletionTime, sizeOfTransaction, activityTime\n| sort by _max",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelC684A6ADB7CB5A45",
+            "title": "Repository Traffic Across Time (Connections)",
+            "visualSettings": "{\"general\":{\"mode\":\"timeSeries\",\"type\":\"line\",\"displayType\":\"default\",\"markerSize\":5,\"lineDashType\":\"solid\",\"markerType\":\"none\",\"lineThickness\":1},\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12,\"logarithmic\":false}},\"legend\":{\"enabled\":true,\"verticalAlign\":\"bottom\",\"fontSize\":12,\"maxHeight\":50,\"showAsTable\":false,\"wrap\":true},\"color\":{\"family\":\"Categorical Default\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"client.connectionId\" nodrop\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| timeslice\n| count_distinct(%\"client.connectionId\") by _timeslice, %\"repo.name\"\n| transpose row _timeslice column %\"repo.name\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": null
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-037B6A2D964F484E",
+            "title": "Just-In-Time Access Approvals by Cyral Administrator",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":100,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"action\", \"subject.user\"\n| where action = \"approval.grant\"\n| count by %\"subject.user\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": 1000
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel4CC6532882D1A84C",
+            "title": "Access Grants by Repository",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":100,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"action\", \"details.repoName\"\n| where action = \"approval.grant\"\n| count by %\"details.repoName\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": 1000
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel74C06DDC93D77A47",
+            "title": "Access Rules Created",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":100,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json auto\n| where %\"action\" = \"access-rules.create\"\n| count by %\"subject.user\", %\"details.repoName\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": 1000
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelA970B7DAA388EA49",
+            "title": "Access Changes by Users",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"table\",\"displayType\":\"default\",\"paginationPageSize\":10,\"fontSize\":12,\"mode\":\"distribution\"},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statementType\",\"repo.type\"\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup ActivityCategory as ActivityCategory, ActivityTerm as ActivityTerm from path://\"/Library/Admin Recommended/CategoryLookup\" on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| where ActivityCategory matches \"Access Changes\"\n| count_distinct(%\"identity.endUser\") by ActivityTerm",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": 1000
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelB78B3B8DABE9AA40",
+            "title": "Access Changes Trends",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"axes\":{\"axisX\":{\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"titleFontSize\":12,\"labelFontSize\":12}},\"series\":{},\"general\":{\"type\":\"column\",\"displayType\":\"stacked\",\"fillOpacity\":1,\"mode\":\"distribution\"},\"color\":{\"family\":\"Categorical Default\"},\"legend\":{\"enabled\":false},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "transient": false,
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n| json \"repo.name\",\"client.applicationName\",\"identity.endUser\",\"identity.group\",\"request.statementType\",\"repo.type\"\n| where %\"repo.name\" matches \"{{repo_name}}\" and %\"client.applicationName\" matches \"{{clientApplication}}\" and %\"identity.endUser\" matches \"{{SSO_User}}\" and %\"identity.group\" matches \"{{SSO_Group}}\"\n| lookup ActivityCategory as ActivityCategory, ActivityTerm as ActivityTerm from path://\"/Library/Admin Recommended/CategoryLookup\"on %\"request.statementType\"=StatementType, %\"repo.type\"=RepoType\n| where ActivityCategory matches \"Access Changes\"\n| count by ActivityTerm,%\"identity.group\"\n| transpose row ActivityTerm column %\"identity.group\" as *",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "spansQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message",
+                    "outputCardinalityLimit": 1000
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        }
+    ],
+    "variables": [
+        {
+            "id": null,
+            "name": "repo_name",
+            "displayName": "repo_name",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\")\n|json \"repo.name\" as repo_name\n|count by repo_name",
+                "field": "repo_name"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false,
+            "valueType": "Any"
+        },
+        {
+            "id": null,
+            "name": "clientApplication",
+            "displayName": "clientApplication",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\")\n|json \"client.applicationName\" as clientApplication\n|count by clientApplication",
+                "field": "clientApplication"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false,
+            "valueType": "Any"
+        },
+        {
+            "id": null,
+            "name": "SSO_User",
+            "displayName": "SSO_User",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\")\n|json \"identity.endUser\" as endUser\n|count by endUser",
+                "field": "endUser"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false,
+            "valueType": "Any"
+        },
+        {
+            "id": null,
+            "name": "SSO_Group",
+            "displayName": "SSO_Group",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\")\n|json \"identity.group\" as ssoGroup\n|count by ssoGroup",
+                "field": "ssoGroup"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false,
+            "valueType": "Any"
+        }
+    ],
+    "coloringRules": []
+}
