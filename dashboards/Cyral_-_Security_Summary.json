@@ -1,0 +1,218 @@
+{
+    "type": "DashboardV2SyncDefinition",
+    "name": "Cyral - Security Summary",
+    "description": "",
+    "title": "Cyral - Security Summary",
+    "rootPanel": null,
+    "theme": "Light",
+    "topologyLabelMap": {
+        "data": {}
+    },
+    "refreshInterval": 0,
+    "timeRange": {
+        "type": "BeginBoundedTimeRange",
+        "from": {
+            "type": "RelativeTimeRangeBoundary",
+            "relativeTime": "-15m"
+        },
+        "to": null
+    },
+    "layout": {
+        "layoutType": "Grid",
+        "layoutStructures": [
+            {
+                "key": "panel068BB0DD976BEB43",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":0}"
+            },
+            {
+                "key": "panel111599AEBC91D947",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":6}"
+            },
+            {
+                "key": "panel9935851198257A48",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":0}"
+            },
+            {
+                "key": "panelE1633FBE93F63A4D",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":6}"
+            },
+            {
+                "key": "panel0431986CB55C4949",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":12}"
+            }
+        ]
+    },
+    "panels": [
+        {
+            "id": null,
+            "key": "panel068BB0DD976BEB43",
+            "title": "Suspicious Activity",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"general\":{\"type\":\"line\",\"displayType\":\"default\",\"markerSize\":5,\"lineDashType\":\"solid\",\"markerType\":\"none\",\"lineThickness\":1,\"mode\":\"timeSeries\"},\"axes\":{\"axisX\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12,\"logarithmic\":false}},\"legend\":{\"enabled\":true,\"verticalAlign\":\"bottom\",\"fontSize\":12,\"maxHeight\":50,\"showAsTable\":false,\"wrap\":true},\"color\":{\"family\":\"Categorical Default\"},\"series\":{\"A_[\\\"authenticationFailure\\\"]\":{\"visible\":true},\"A_[\\\"closedConnection\\\"]\":{\"visible\":true},\"A_[\\\"newConnection\\\"]\":{\"visible\":true},\"A_[\\\"portScan\\\"]\":{\"visible\":true},\"A_[\\\"query\\\",\\\"fullTableScan\\\"]\":{\"visible\":true},\"A_[\\\"query\\\"]\":{\"visible\":true}},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto\n| where %\"activityTypes\" in (\"[\\\"authenticationFailure\\\"]\", \"[\\\"portScan\\\"]\") and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|timeslice |count by _timeslice, %\"activityTypes\"| transpose row _timeslice column %\"activityTypes\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel111599AEBC91D947",
+            "title": "Suspicious Activity By Repo",
+            "visualSettings": "{\"title\":{\"fontSize\":14},\"general\":{\"type\":\"line\",\"displayType\":\"default\",\"markerSize\":5,\"lineDashType\":\"solid\",\"markerType\":\"none\",\"lineThickness\":1,\"mode\":\"timeSeries\"},\"axes\":{\"axisX\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12},\"axisY\":{\"title\":\"\",\"titleFontSize\":12,\"labelFontSize\":12,\"logarithmic\":false}},\"legend\":{\"enabled\":true,\"verticalAlign\":\"bottom\",\"fontSize\":12,\"maxHeight\":50,\"showAsTable\":false,\"wrap\":true},\"color\":{\"family\":\"Categorical Default\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto\n| where %\"activityTypes\" in (\"[\\\"authenticationFailure\\\"]\", \"[\\\"portScan\\\"]\") and !isNull(%\"repo.name\") and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|timeslice|count by _timeslice, %\"repo.name\"| transpose row _timeslice column %\"repo.name\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel9935851198257A48",
+            "title": "Suspicious Activity By Geography",
+            "visualSettings": "{\"general\":{\"mode\":\"map\",\"type\":\"map\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n| json auto|where %\"activityTypes\" in (\"[\\\"authenticationFailure\\\"]\", \"[\\\"portScan\\\"]\") and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"| lookup latitude, longitude \n  from geo://location on ip=%\"client.host\" \n| count by latitude, longitude\n| sort _count\n\n",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelE1633FBE93F63A4D",
+            "title": "Top {{topKLimit}} Suspicious IPs",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"table\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n| json auto|where %\"activityTypes\" in (\"[\\\"authenticationFailure\\\"]\", \"[\\\"portScan\\\"]\") and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\"|lookup latitude, longitude, country_code\n  from geo://location on ip=%\"client.host\"|count by %\"client.host\", country_code|sort by _count desc | limit {{topKLimit}}",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel0431986CB55C4949",
+            "title": "{{topKLimit}} Most Recent Authentication Failures",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"table\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n| json auto|where %\"activityTypes\" contains \"authenticationFailure\" and %\"sidecar.name\" matches \"{{sidecar_name}}\" and %\"repo.name\" matches \"{{repo_name}}\" |count by %\"identity.repoUser\", %\"identity.endUser\", %\"repo.name\", %\"activityTime\", %\"client.host\", %\"client.applicationName\"|sort by %\"activityTime\" desc|limit {{topKLimit}}",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Manual",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": [
+                {
+                    "id": "8z4Fti2lWtJj4IzWVAhtJ53dyt70jpzm7l1ovehDiWCrzPL9GsFStoCD3Wiu",
+                    "relativePath": "../Cyral - User Activity Details",
+                    "includeTimeRange": true,
+                    "includeVariables": true
+                }
+            ]
+        }
+    ],
+    "variables": [
+        {
+            "id": "4CB7A451898A998B",
+            "name": "topKLimit",
+            "displayName": "topKLimit",
+            "defaultValue": "5",
+            "sourceDefinition": {
+                "variableSourceType": "CsvVariableSourceDefinition",
+                "values": "5, 10, 25, 50, 100"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": false,
+            "hideFromUI": false
+        },
+        {
+            "id": "A463B5C8B999AA88",
+            "name": "sidecar_name",
+            "displayName": "sidecar_name",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json \"sidecar.name\" as sidecar_name|count by sidecar_name",
+                "field": "sidecar_name"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false
+        },
+        {
+            "id": "546A31DB8AB9B889",
+            "name": "repo_name",
+            "displayName": "repo_name",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json \"repo.name\" as repo_name|count by repo_name",
+                "field": "repo_name"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false
+        }
+    ],
+    "coloringRules": []
+}

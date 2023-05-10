@@ -1,0 +1,41 @@
+{
+    "type": "LookupTableSyncDefinition",
+    "name": "CategoryLookup",
+    "description": "",
+    "fields": [
+        {
+            "fieldName": "Index",
+            "fieldType": "string"
+        },
+        {
+            "fieldName": "ActivityCategory",
+            "fieldType": "string"
+        },
+        {
+            "fieldName": "ActivityCategoryShortName",
+            "fieldType": "string"
+        },
+        {
+            "fieldName": "ActivityTerm",
+            "fieldType": "string"
+        },
+        {
+            "fieldName": "ActivityTermShortName",
+            "fieldType": "string"
+        },
+        {
+            "fieldName": "StatementType",
+            "fieldType": "string"
+        },
+        {
+            "fieldName": "RepoType",
+            "fieldType": "string"
+        }
+    ],
+    "primaryKeys": [
+        "StatementType",
+        "RepoType"
+    ],
+    "ttl": 0,
+    "sizeLimitAction": "StopIncomingMessages"
+}

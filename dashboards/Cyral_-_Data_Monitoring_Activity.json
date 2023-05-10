@@ -1,0 +1,422 @@
+{
+    "type": "DashboardV2SyncDefinition",
+    "name": "Cyral - Data Monitoring Activity",
+    "description": "",
+    "title": "Cyral - Data Monitoring Activity",
+    "rootPanel": null,
+    "theme": "Light",
+    "topologyLabelMap": {
+        "data": {}
+    },
+    "refreshInterval": 0,
+    "timeRange": {
+        "type": "BeginBoundedTimeRange",
+        "from": {
+            "type": "RelativeTimeRangeBoundary",
+            "relativeTime": "-15m"
+        },
+        "to": null
+    },
+    "layout": {
+        "layoutType": "Grid",
+        "layoutStructures": [
+            {
+                "key": "panelCDE09E0F9057AB4E",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":16}"
+            },
+            {
+                "key": "panel8CFE3C7793C7E848",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":16}"
+            },
+            {
+                "key": "panelPANE-9B92CFD19042A943",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":4}"
+            },
+            {
+                "key": "panel00FE41DCA5C91B44",
+                "structure": "{\"height\":4,\"width\":4,\"x\":0,\"y\":0}"
+            },
+            {
+                "key": "panel3DE20BE5A4FF984B",
+                "structure": "{\"height\":4,\"width\":4,\"x\":4,\"y\":0}"
+            },
+            {
+                "key": "panel7FD1F0A59123D84E",
+                "structure": "{\"height\":4,\"width\":4,\"x\":8,\"y\":0}"
+            },
+            {
+                "key": "panelB01EF3A89273094A",
+                "structure": "{\"height\":4,\"width\":4,\"x\":12,\"y\":0}"
+            },
+            {
+                "key": "panelEBA3D969B2D6EA47",
+                "structure": "{\"height\":4,\"width\":4,\"x\":16,\"y\":0}"
+            },
+            {
+                "key": "panel41A06B049ADFA84C",
+                "structure": "{\"height\":4,\"width\":4,\"x\":20,\"y\":0}"
+            },
+            {
+                "key": "panelPANE-BCDAF36593E8E94D",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":10}"
+            },
+            {
+                "key": "panel40B3723EA7A51847",
+                "structure": "{\"height\":6,\"width\":12,\"x\":0,\"y\":22}"
+            },
+            {
+                "key": "panel08DF46AAA4A2EB4E",
+                "structure": "{\"height\":6,\"width\":12,\"x\":12,\"y\":22}"
+            },
+            {
+                "key": "panel77590EADADF91A45",
+                "structure": "{\"height\":6,\"width\":24,\"x\":0,\"y\":28}"
+            }
+        ]
+    },
+    "panels": [
+        {
+            "id": null,
+            "key": "panelCDE09E0F9057AB4E",
+            "title": "Data Activity by SSO Group",
+            "visualSettings": "{\"general\":{\"mode\":\"timeSeries\",\"type\":\"line\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto\n| where %\"activityTypes\" contains \"query\" AND %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\"|timeslice 15m|count by _timeslice, %\"identity.group\"| transpose row _timeslice column %\"identity.group\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel8CFE3C7793C7E848",
+            "title": "Requests by SSO Group",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"column\",\"displayType\":\"stacked\"},\"series\":{},\"overrides\":[]}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto\n| where %\"activityTypes\" contains \"query\" and %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\"|if(isBlank(%\"identity.group\"), \"blank\", %\"identity.group\") as myField|where myField != \"blank\"|count by %\"identity.group\", %\"request.statementType\"| transpose row %\"identity.group\" column %\"request.statementType\" as *",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-9B92CFD19042A943",
+            "title": "Anomalous Read Access",
+            "visualSettings": "{\"general\":{\"mode\":\"honeyComb\",\"type\":\"honeyComb\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"honeyComb\":{\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#98ECA9\"},{\"from\":null,\"to\":null,\"color\":\"#F2DA73\"},{\"from\":null,\"to\":null,\"color\":\"#FFB5B5\"}],\"shape\":\"hexagon\",\"groupBy\":[],\"aggregationType\":\"count\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n| json \"request.fieldsAccessed[*].label\" as fieldLabel|json \"identity.group\" as SSOGroup|json auto|where SSOGroup matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\"|count by fieldLabel, SSOGroup",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel00FE41DCA5C91B44",
+            "title": "Number of Users",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Users\",\"noDataString\":\"0\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" AND %\"activityTypes\" CONTAINS \"query\" |count_distinct(%\"identity.endUser\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel3DE20BE5A4FF984B",
+            "title": "Inactive Users",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Users\",\"noDataString\":\"0\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "((_sourcecategory = \"cyralLogs\"))\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" |first(%\"activityTime\") by %\"identity.endUser\", %\"identity.group\", %\"identity.repoUser\"| now()-30d as expireTime|parseDate(_first, \"yyyy-MM-dd HH:mm:ss\") as parsedDate|where expireTime > parsedDate|count",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel7FD1F0A59123D84E",
+            "title": "Total Reads",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Reads\",\"noDataString\":\"0\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\"|json \"request.datasetsAccessed[*].accessType\" as accessType|where accessType CONTAINS \"read\"|count",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelB01EF3A89273094A",
+            "title": "Avg Execution Time",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"ms\",\"noDataString\":\"0\",\"rounding\":0}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" and !isNull(%\"response.message\")| %\"response.executionTimeNanos\" / 1000000 as executionTimeInMS|avg(executionTimeInMS)",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelEBA3D969B2D6EA47",
+            "title": "Avg Records Read",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Records\",\"noDataString\":\"0\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" and !isNull(%\"response.message\")|avg(%\"response.records\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel41A06B049ADFA84C",
+            "title": "Avg Bytes Read",
+            "visualSettings": "{\"general\":{\"mode\":\"singleValueMetrics\",\"type\":\"svp\"},\"series\":{},\"svp\":{\"label\":\"Bytes\",\"noDataString\":\"0\"}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" and !isNull(%\"response.message\")|avg(%\"response.bytes\")",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panelPANE-BCDAF36593E8E94D",
+            "title": "Groups By Statement Category",
+            "visualSettings": "{\"general\":{\"mode\":\"honeyComb\",\"type\":\"honeyComb\",\"displayType\":\"default\"},\"title\":{\"fontSize\":14},\"honeyComb\":{\"thresholds\":[{\"from\":null,\"to\":null,\"color\":\"#98ECA9\"},{\"from\":null,\"to\":null,\"color\":\"#F2DA73\"},{\"from\":null,\"to\":null,\"color\":\"#FFB5B5\"}],\"shape\":\"hexagon\",\"groupBy\":[],\"aggregationType\":\"avg\"},\"series\":{},\"legend\":{\"enabled\":false}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json \"request.fieldsAccessed[*].label\" as fieldLabel|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\"|lookup * from path://\"/Library/Users/pcasas@cyral.com/Cyral Dashboards/statementCategory\" on %\"request.statementType\"=statementType|count by %\"identity.group\", categoryShortName",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel40B3723EA7A51847",
+            "title": "Query Trend By User",
+            "visualSettings": "{\"general\":{\"mode\":\"timeSeries\",\"type\":\"line\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" |timeslice 15m|count by _timeslice, %\"identity.endUser\"| transpose row _timeslice column %\"identity.endUser\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel08DF46AAA4A2EB4E",
+            "title": "Queries By User - Aggregate",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"column\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" |count by %\"identity.endUser\", %\"request.statementType\"|transpose row %\"identity.endUser\" column %\"request.statementType\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        },
+        {
+            "id": null,
+            "key": "panel77590EADADF91A45",
+            "title": "Recent Activity By User",
+            "visualSettings": "{\"general\":{\"mode\":\"distribution\",\"type\":\"table\"},\"series\":{}}",
+            "keepVisualSettingsConsistentWithParent": true,
+            "panelType": "SumoSearchPanel",
+            "queries": [
+                {
+                    "queryString": "(_sourcecategory = \"cyralLogs\")\n|json auto|where %\"identity.group\" matches \"{{GroupName}}\" AND %\"request.statementType\" matches \"{{StatementType}}\" |first(%\"activityTime\") by %\"identity.endUser\", %\"identity.group\", %\"identity.repoUser\"",
+                    "queryType": "Logs",
+                    "queryKey": "A",
+                    "metricsQueryMode": null,
+                    "metricsQueryData": null,
+                    "tracesQueryData": null,
+                    "parseMode": "Auto",
+                    "timeSource": "Message"
+                }
+            ],
+            "description": "",
+            "timeRange": null,
+            "coloringRules": null,
+            "linkedDashboards": []
+        }
+    ],
+    "variables": [
+        {
+            "id": "BC5E338A9AABAB99",
+            "name": "StatementType",
+            "displayName": "StatementType",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")\n|json \"request.statementType\" as statementType|count by statementType",
+                "field": "statementType"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false
+        },
+        {
+            "id": "AD763B4BA8B98A8A",
+            "name": "GroupName",
+            "displayName": "GroupName",
+            "defaultValue": "*",
+            "sourceDefinition": {
+                "variableSourceType": "LogQueryVariableSourceDefinition",
+                "query": "(_sourceCategory=\"cyralLogs\" and _collector=\"HTTP\")|json \"identity.group\" as identityGroup|count by identityGroup",
+                "field": "identityGroup"
+            },
+            "allowMultiSelect": false,
+            "includeAllOption": true,
+            "hideFromUI": false
+        }
+    ],
+    "coloringRules": []
+}
